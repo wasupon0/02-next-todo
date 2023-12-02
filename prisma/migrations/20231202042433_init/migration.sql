@@ -6,3 +6,6 @@ CREATE TABLE "Todo" (
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL
 );
+
+INSERT INTO "Todo" ("id", "title", "complete", "createdAt","updatedAt")
+VALUES ("001", "test001", false, GETDATE(), GETDATE());
