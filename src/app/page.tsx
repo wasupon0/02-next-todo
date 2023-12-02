@@ -3,8 +3,8 @@ import prisma from "@/db";
 import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 
-function getTodos() {
-  return prisma.todo.findMany();
+async function getTodos() {
+  return await prisma.todo.findMany();
 }
 
 async function toggleTodo(id: string, complete: boolean) {
