@@ -16,7 +16,9 @@ async function toggleTodo(id: string, complete: boolean) {
 export default async function Home() {
   const todos = await getTodos();
 
-  //await prisma.todo.create({ data: { title: "test", complete: false } });
+  if (Object.keys(todos).length === 0 && todos.constructor === Object) {
+    await prisma.todo.create({ data: { title: "test", complete: false } });
+  }
 
   return (
     <>
