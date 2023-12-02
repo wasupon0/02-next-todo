@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "main.Todo" (
+CREATE TABLE "Todo" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "title" TEXT NOT NULL,
     "complete" BOOLEAN NOT NULL,
@@ -7,5 +7,3 @@ CREATE TABLE "main.Todo" (
     "updatedAt" DATETIME NOT NULL
 );
 
-INSERT INTO "Todo" ("id", "title", "complete", "createdAt","updatedAt")
-VALUES ("001", "test001", false, GETDATE(), GETDATE());
